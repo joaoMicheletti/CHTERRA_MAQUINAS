@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+    <title>CHTERRA | LOCAÇÂO DE MAQUINAS</title>
+    <script>
+        function BTN(){
+            const formContainer = document.getElementById("Formulario");
+            formContainer.scrollIntoView({ behavior: "smooth" });
+        };
+        function Pergunta(id){
+            console.log(id)
+            if(id === 'p01'){
+                var resposta = document.querySelector('#r01');
+                if(resposta.style.display === "block"){
+                    resposta.style.display = "none"
+                } else if(resposta.style.display = "none")
+                resposta.style.display = "block"
+            }
+            if(id === 'p02'){
+                var resposta = document.querySelector('#r02');
+                if(resposta.style.display === "block"){
+                    resposta.style.display = "none"
+                } else if(resposta.style.display = "none")
+                resposta.style.display = "block"
+            }
+            if(id === 'p03'){
+                var resposta = document.querySelector('#r03');
+                if(resposta.style.display === "block"){
+                    resposta.style.display = "none"
+                } else if(resposta.style.display = "none")
+                resposta.style.display = "block"
+            }
+            if(id === 'p04'){
+                var resposta = document.querySelector('#r04');
+                if(resposta.style.display === "block"){
+                    resposta.style.display = "none"
+                } else if(resposta.style.display = "none")
+                resposta.style.display = "block"
+            }
+        };
+        function Orcamento(){
+        var nome = document.querySelector("#nome").value;
+        var email = document.querySelector("#email").value;
+        var contato = document.querySelector("#contato").value;
+        var description = document.querySelector("#description").value;
+        console.log(description.length)
+        if(nome === ''){
+            alert('Preencha todos os campos');
+        } else if (email === ''){
+            alert('Preencha todos os campos');
+        } else if(contato == '') {
+            alert('Preencha todos os campos');
+        }else if (contato.length < 11 || contato.length > 11) {
+            alert('Forneça um número de Telefone Válido');
+        }else if (description.length <= 0){
+            alert("preencha todos os campos");
+        } else {
+            var msg = `
+            *Olá,* Vim através da sua página de vendas e gostaria de solicitar um orçamento. Seguem minhas informações:\n*Nome:*__ ${nome}\n*E-mail:*__ ${email}\n*Contato:* __ ${contato}\n*Descrição da necessidade:* __ ${description}\n
+            `;
+            
+            var msgEncoded = encodeURIComponent(msg);
+
+            var linkWhatsApp = "https://api.whatsapp.com/send?phone=5511932223533&text=" + msgEncoded;
+
+            // Abra o link em uma nova janela ou redirecione para ele
+            window.open(linkWhatsApp, '_blank');
+        }        
+    }
+    </script>
+</head>
+<body>
+    <section id="primarySection">
+        <div id="divImgPrimaary">
+            <img src="./assets/tituloHome.png" alt="Imagen principal - Farase de emoacto - Sua Obra começa com a maquina certa!"/>
+            <p id="subTitulo">
+                Na CH Terra, você aluga equipamentos com agilidade, suporte técnico e confiança de quem entende do mercado.
+            </p>
+            <button onclick="BTN()" id="BtnPrimary">Fale com Um de nossos especialistas</button>
+        </div>
+    </section>
+
+    <div id="faixa">
+        .
+    </div>
+
+
+    <section id="SecundSection">
+
+        <div id="ContainerSectionSecund">
+
+            <div id="Img_maquinarios">
+                <img src="./assets/tratores.png" alt="IMagen ilustrativa Maquinas disponiveis para locação"/>
+                <button class="btn" onclick="BTN()" id="_01">Fale com um de nossos especialistas</button>
+            </div>
+
+            <div id="TextSEcundSection">
+                <h1>Produtividade sem limites: <br/>locação de máquinas para quem não pode parar</h1>
+                <p>
+                    Oferecemos máquinas de alto desempenho para obras de infraestrutura, 
+                    movimentação de terra e projetos industriais. Aqui, você não perde 
+                    tempo com burocracia ou manutenção – só trabalha com produtividade.
+                </p>
+                <button class="btn" onclick="BTN()" id="_02">Fale com um de nossos especialistas</button>
+            </div>
+            
+        </div>
+
+
+        <div id="beneficios">
+            <h1>Nossos benefícios</h1>
+            <div id="ContainerObjetivos">
+                <div class="CardBeneficio">
+                    <img class="IMGCARD" src="assets/equipamento.png" alt="img ilustrativa para o card"/>
+                    <p class="tituloCard">
+                        Equipamentos revisados e prontos para uso imediato
+                    </p>
+                    <p class="Corpocard">
+                        Máquinas sempre inspecionadas e disponíveis para operação no momento da entrega, garantindo eficiência desde o primeiro dia.
+                    </p>
+                </div>
+                <div class="CardBeneficio">
+                    <img class="IMGCARD" src="assets/logistica.png" alt="img ilustrativa para o card"/>
+                    <p class="tituloCard">
+                        Logística rápida e pontual em SP e região
+                    </p>
+                    <p class="Corpocard">
+                        Atendimento ágil com entregas programadas e monitoradas para você não perder tempo em sua obra.
+                    </p>
+                </div>
+                <div class="CardBeneficio">
+                    <img class="IMGCARD" src="assets/equipe.png" alt="img ilustrativa para o card"/>
+                    <p class="tituloCard">
+                        Equipe técnica disponível para orientações
+                    </p>
+                    <p class="Corpocard">
+                        Suporte especializado sempre que precisar, para garantir o melhor desempenho dos equipamentos no seu projeto.
+                    </p>
+                </div>
+                <div class="CardBeneficio">
+                    <img class="IMGCARD" src="assets/flex4.png" alt="img ilustrativa para o card"/>
+                    <p class="tituloCard">
+                        Flexibilidade de prazos e contratos personalizados
+                    </p>
+                    <p class="Corpocard">
+                        Soluções sob medida para a sua necessidade, com opções de locação adaptadas ao seu ritmo e orçamento.
+                    </p>
+                </div>
+            
+            </div>
+            <button onclick="BTN()" id="BtnBeneficios">Solicite agora um orçamento personalizado</button>
+        </div>
+
+
+        <div id="ComCHTERRA">
+            <div id="conteinerCom">
+                <div class="ConCH">
+                    <h1>Focados em entregar mais que equipamentos: </h1>
+                    <p>
+                        
+                        oferecemos estrutura para transformar seu canteiro em um centro de produtividade.
+                        Apoiamos o seu projeto com máquinas de alta performance, suporte técnico e um 
+                        planejamento inteligente de locação para garantir resultados extraordinários em cada etapa da obra.
+                    </p>
+                    <button onclick="BTN()" id="BTNC">Solicite agora um orçamento personalizado</button>
+                </div>
+
+                <div class="ConCH">
+                    <Img src="assets/circle.png" alt="roda Chterra"/>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="Faq">
+            <h1>Duvidas?</h1>
+
+            <div id="questions">
+                <div onclick="Pergunta( this.id)" class="pergunta" id="p01">
+                    <p>Como funciona o processo de locação das máquinas?</p>
+                    <div class="iconp">
+                        <img src="assets/iconp.png" alt="icone de pergunta"/>
+                    </div>
+                </div>
+                <div class="resposta" id="r01">
+                    <p>Após o seu contato, nossa equipe realiza um breve levantamento da sua necessidade, indica os equipamentos ideais e envia uma proposta personalizada. Com a aprovação, agendamos a entrega no local da obra no prazo combinado. </p>
+                </div>
+                <div onclick="Pergunta( this.id)"  class="pergunta" id="p02">
+                    <p>As máquinas passam por manutenção antes da entrega?</p>
+                    <div class="iconp">
+                        <img src="assets/iconp.png" alt="icone de pergunta"/>
+                    </div>
+                </div>
+                <div class="resposta" id="r02">
+                    <p>Sim. Todas as máquinas são revisadas e testadas antes de cada locação, garantindo segurança e performance desde o primeiro uso.</p>
+                </div>
+                <div onclick="Pergunta( this.id)"  class="pergunta" id="p03">
+                    <p>Oferecem suporte técnico durante a locação?</p>
+                    <div class="iconp">
+                        <img src="assets/iconp.png" alt="icone de pergunta"/>
+                    </div>
+                </div>
+                <div  class="resposta" id="r03">
+                    <p>Com certeza! Nossa equipe técnica está disponível para orientações e suporte sempre que necessário, garantindo o bom funcionamento do equipamento durante todo o período contratado.</p>
+                </div>
+                <div onclick="Pergunta( this.id)"  class="pergunta" id="p04">
+                    <p>É possível ajustar prazos ou renovar o contrato de locação?</p>
+                    <div class="iconp">
+                        <img src="assets/iconp.png" alt="icone de pergunta"/>
+                    </div>
+                </div>
+                <div class="resposta" id="r04">
+                    <p>Sim. Trabalhamos com flexibilidade nos prazos e oferecemos opções de renovação conforme a evolução do seu projeto. Basta entrar em contato com nosso atendimento para ajustar as condições.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <section id="Formulario">
+            <div id="containerForm">
+                <div id="Form">
+                    <div id="f">
+                        <input id="nome" placeholder="  Nome Completo" type="text"/>
+                        <input id="email" placeholder="  E-mail" type="email"/>
+                        <input id="contato" placeholder="  Contato" type="number"/>
+                        <textarea id="description" placeholder=" Descreva sua necessidade " 
+                        id="mensagem" name="mensagem" rows="3" cols="0"></textarea>
+                        <button onclick="Orcamento()"  id="submit">Fale com um especialista</button>
+                    </div>
+                </div>
+        
+            </div>
+        </section>
+
+    </section>
+
+    <footer>
+        <p>📧 contato@chterra.com.br | 📞 (11) 98165-1780<br>
+        📍 Jardim São Luís, São Paulo - SP, 05845-300| 🕗 Atendimento: 8h às 18h<br/>
+        <a id="dev" href="https://www.instagram.com/cristatus.oficial/" target="_blank">Developd By Cristatus</a>
+        </p>
+    
+      </footer>
+</body>
+</html>
