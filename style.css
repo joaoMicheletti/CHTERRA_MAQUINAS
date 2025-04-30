@@ -11,17 +11,16 @@
 }
 #primarySection{
     width: 100%;
-    height: 100vh;
-    background-image: url(./assets/bg01.png);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
+#V1 {
+    width: 100%;
+  }
 #divImgPrimaary {
+    margin-top: 150px;
     width: 50%;
-    height: 100vh;
-    padding-top: 150px;
     margin-left: 5%;
+    position: absolute;
+    z-index: 1000;
 }#divImgPrimaary img {
     width: 60%;
 }
@@ -54,17 +53,13 @@
 @media(max-width: 800px){
     #primarySection{
         width: 100%;
-        height: 100vh;
-        background-image: url(./assets/bg01.png);
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
     }
     #divImgPrimaary {
-        width: 80%;
-        height: 100vh;
-        padding-top: 150px;
+        margin-top: 0px;
+        width: 50%;
         margin-left: 5%;
+        position: absolute;
+        z-index: 1000;
     }#divImgPrimaary img {
         width: 80%;
     }
@@ -92,6 +87,7 @@
 }
 
 #faixa{
+    margin-top: -5px;
     height: 10px;
     background-color:#f39b1f;
     color: #f39b1f;
@@ -109,28 +105,51 @@
     padding-bottom: 50px;
 }
 #ContainerSectionSecund {
-    width: 90%;
-    margin-left: 5%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
 #Img_maquinarios {
-    width: 60%;
+    width: 40%;
     text-align: center;
-}#Img_maquinarios img  {
-    width: 70%;
+    display: flex;
+    flex-direction: row;
 }
+.videos {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+#M {
+}
+.contentMovie {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.contentv01 {
+    width: 48%;
+    height: 100%;
+}
+.Solo {
+    width: 100%;
+}
+
 #_01 {
     display: none;
 }
 #TextSEcundSection {
     width: 40%;
 }#TextSEcundSection h1 {
-    padding-top: 200px;
+    padding-top: 80px;
     font-family: "Horizon";
     font-size: 20px;
     color:#f39b1f;
-    line-height: 30px;
+    line-height:20px;
 }#TextSEcundSection p {
     margin-top: 10px;
     color: rgb(255, 255, 255);
@@ -159,13 +178,7 @@
     #_02 {
         display: none;
     }
-    #SecundSection {
-        width: 100%;
-        height: auto;
-        padding-top: 40px;
-        padding-bottom: 50px;
-    }
-    
+        
     #ContainerSectionSecund {
         width: 90%;
         margin-left: 5%;
@@ -176,9 +189,16 @@
     #Img_maquinarios {
         width: 100%;
         text-align: center;
-    }#Img_maquinarios img  {
-        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
+    
+
+
+
+
+
     #TextSEcundSection {
         width: 100%;
         padding-bottom: 50px;
@@ -317,8 +337,11 @@
     justify-content: space-around;
 }
 .ConCH{
-   width: 40%; 
+   width: 50%; 
 }
+.ConCH  img{
+    width: 100%;
+ }
 .ConCH h1 {
     padding-top: 80px;
     font-family: "Horizon";
@@ -407,7 +430,7 @@
     padding-top: 80px;
     padding-bottom: 30px;
     font-family: "Horizon";
-    font-size: 40px;
+    font-size: 100px;
     color: #f39b1f;
     text-align: center;
 }
@@ -417,30 +440,34 @@
     margin-left: 10%;
     padding-bottom: 80px;
 }
-.iconp img {
-    width: 30px;
-    cursor: pointer;
-}
+
 .pergunta {
+    background-color: #b3aea9;
+    color: white;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-weight: 900;
+}
+._01pergunta {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border: solid 1px gold;
-    height: auto;
-    padding: 10px;
-    font-family: "Montserrat";
-    color: white;
-    font-weight: 600;
+    padding: 20px;
+}
+.iconp img {
+    width: 20px;
     cursor: pointer;
 }
 .resposta {
-    border: solid 1px gold;
+    background-color: #f39b1f;
+    text-align: left;
     height: auto;
-    padding: 10px;
+    padding: 20px;
     font-family: "Montserrat";
     color: white;
-    font-weight: 600;
+    font-weight: 400;
     display: none;
+    border-radius: 10px;
 }
 
 @media(max-width: 800px){
@@ -452,7 +479,7 @@
         padding-top: 80px;
         padding-bottom: 30px;
         font-family: "Horizon";
-        font-size: 40px;
+        font-size: 100px;
         color: #f39b1f;
         text-align: center;
     }
@@ -463,14 +490,19 @@
         padding-bottom: 80px;
     }
     .iconp img {
-        width: 30px;
+        width: 20px;
         cursor: pointer;
     }
-    .pergunta {
+    ._01pergunta {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        border: solid 1px gold;
+        padding: 20px;
+    }
+    .pergunta {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         height: auto;
         padding: 10px;
         font-family: "Montserrat";
@@ -479,7 +511,6 @@
         cursor: pointer;
     }
     .resposta {
-        border: solid 1px gold;
         height: auto;
         padding: 10px;
         font-family: "Montserrat";
@@ -488,7 +519,27 @@
         display: none;
     }
 }
-
+#LogoBigForm{
+    text-align: center;
+    width: 90%;
+    margin-left: 5%;
+}
+#LogoBigForm h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "Horizon";
+    color: #f39b1f;
+    line-height: 17px;
+}
+#LogoBigForm p {
+    font-family: "Montserrat";
+    color: white;
+    margin-bottom: 20px;
+    line-height: 15px;
+}
+#LogoBigForm img{
+    width: 30%;
+}
 #Formulario {
     padding-top: 50px;
     width: 80%;
@@ -500,31 +551,32 @@
     flex-direction: column;
 }
 #f input {
-    width: 80%;
-    margin-left: 10%;
+    width: 90%;
+    margin-left: 5%;
     height: 40px;
     border-radius: 5px;
     border: none;
     margin-bottom: 10px;
     border: solid 1px;
-    background-color: rgba(0, 0, 0, 0.582);
+    background-color: rgb(255, 255, 255);
 }
 #f  textarea {
-    width: 80%;
-    margin-left: 10%;
+    width: 90%;
+    margin-left: 5%;
     margin-bottom: 10px;
-    background-color: rgba(0, 0, 0, 0.582);
+    background-color: rgb(255, 255, 255);
 }
 #f button{
     width: 80%;
     margin-left: 10%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: none;
     color: #000000;
     font-family: "Montserrat";
     font-size: 15px;
     font-weight: 800;
+    box-shadow: 3px 3px 3px #f39b1f;
     background: linear-gradient(90deg, #f39b1f, #b3aea9);
     
 
@@ -536,10 +588,50 @@ footer {
     padding: 20px;
     text-align: center;
     font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#SocialRede  {
+    margin-top: 10px;
+}
+#developer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#developer p {
+    margin-top: 20px;
+    padding: 10px;
+}
+#logoDEveloper {
+    width: 50px;
+}#Indereço  {
+    font-family: "Montserrat";
+    padding: 20px;
+}
+.pFooter{
+    font-family: "Montserrat";
 }
 footer  a {
     margin-top: 10px;
     color: rgb(255, 255, 255);
     font-family: "Horizon";
     text-decoration: none;
+}
+@media(max-width: 800px){
+    footer{
+        flex-direction: column;
+    }
+    #SocialRede {
+        width: 90%;
+        margin-left: 5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 10px;
+    }#developer {
+        width: 50%;
+        margin-left: 25%;
+    }
 }

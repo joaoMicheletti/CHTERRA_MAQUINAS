@@ -17,29 +17,43 @@
                 var resposta = document.querySelector('#r01');
                 if(resposta.style.display === "block"){
                     resposta.style.display = "none"
-                } else if(resposta.style.display = "none")
-                resposta.style.display = "block"
+                    document.querySelector(`#${id}`).style.backgroundColor = "#b3aea9"; 
+                    resposta.style.backgroundColor = "#f39b1f";
+                } else if(resposta.style.display = "none"){
+                     resposta.style.display = "block"
+                     document.querySelector(`#${id}`).style.backgroundColor = "#f39b1f"; 
+                }                   
             }
             if(id === 'p02'){
                 var resposta = document.querySelector('#r02');
                 if(resposta.style.display === "block"){
-                    resposta.style.display = "none"
-                } else if(resposta.style.display = "none")
-                resposta.style.display = "block"
+                    resposta.style.display = "none";
+                    document.querySelector(`#p02`).style.backgroundColor = "#b3aea9"; 
+                } else if(resposta.style.display = "none"){
+                    resposta.style.display = "block"
+                    document.querySelector(`#${id}`).style.backgroundColor = "#f39b1f";
+                }        
             }
             if(id === 'p03'){
                 var resposta = document.querySelector('#r03');
                 if(resposta.style.display === "block"){
                     resposta.style.display = "none"
-                } else if(resposta.style.display = "none")
-                resposta.style.display = "block"
+                    document.querySelector(`#p03`).style.backgroundColor = "#b3aea9"; 
+                } else if(resposta.style.display = "none"){
+                    resposta.style.display = "block"
+                    document.querySelector(`#${id}`).style.backgroundColor = "#f39b1f";
+                }
             }
             if(id === 'p04'){
                 var resposta = document.querySelector('#r04');
                 if(resposta.style.display === "block"){
                     resposta.style.display = "none"
-                } else if(resposta.style.display = "none")
-                resposta.style.display = "block"
+                    document.querySelector(`#p04`).style.backgroundColor = "#b3aea9";
+                } else if(resposta.style.display = "none"){
+                    resposta.style.display = "block"
+                    document.querySelector(`#${id}`).style.backgroundColor = "#f39b1f";
+                }
+                
             }
         };
         function Orcamento(){
@@ -82,6 +96,8 @@
             </p>
             <button onclick="BTN()" id="BtnPrimary">Fale com Um de nossos especialistas</button>
         </div>
+        <video id="V1" loop="loop" autoplay="" playsinline="" muted=""  preload="none" src="assets/teste.mp4"></video>
+        
     </section>
 
     <div id="faixa">
@@ -91,12 +107,25 @@
 
     <section id="SecundSection">
 
+
         <div id="ContainerSectionSecund">
 
             <div id="Img_maquinarios">
-                <img src="./assets/tratores.png" alt="IMagen ilustrativa Maquinas disponiveis para locação"/>
-                <button class="btn" onclick="BTN()" id="_01">Fale com um de nossos especialistas</button>
+                <div class="videos" >
+                    <div class="contentMovie">
+                        <video class="contentv01" loop="loop" autoplay="" playsinline="" muted=""  preload="none" src="assets/001.mp4"></video>
+                        <video class="contentv01" loop="loop" autoplay="" playsinline="" muted=""  preload="none" src="assets/002.mp4"></video>
+                    </div>
+                    <div class="contentMovie">
+                        <video class="contentv01" loop="loop" autoplay="" playsinline="" muted=""  preload="none" src="assets/003.mp4"></video>
+                        <video class="contentv01" loop="loop" autoplay="" playsinline="" muted=""  preload="none" src="assets/006.mp4"></video>
+                    </div>
+                </div>
+                <div class="videos" id="M">
+                    <video class="Solo" loop="loop" autoplay="" playsinline="" muted=""  preload="none" src="assets/005.mp4"></video>
+                </div>
             </div>
+
 
             <div id="TextSEcundSection">
                 <h1>Produtividade sem limites: <br/>locação de máquinas para quem não pode parar</h1>
@@ -177,44 +206,57 @@
 
 
         <div id="Faq">
-            <h1>Duvidas?</h1>
+            <h1>FAQ</h1>
 
             <div id="questions">
                 <div onclick="Pergunta( this.id)" class="pergunta" id="p01">
-                    <p>Como funciona o processo de locação das máquinas?</p>
-                    <div class="iconp">
-                        <img src="assets/iconp.png" alt="icone de pergunta"/>
+                    <div class="_01pergunta">
+                        <p>Como funciona o processo de locação das máquinas?</p>
+                        <div class="iconp">
+                            <img src="assets/iconp.png" alt="icone de pergunta"/>
+                        </div>
+                    </div>                    
+                    <div class="resposta" id="r01">
+                        <p>Após o seu contato, nossa equipe realiza um breve levantamento da sua necessidade, indica os equipamentos ideais e envia uma proposta personalizada. Com a aprovação, agendamos a entrega no local da obra no prazo combinado. </p>
                     </div>
                 </div>
-                <div class="resposta" id="r01">
-                    <p>Após o seu contato, nossa equipe realiza um breve levantamento da sua necessidade, indica os equipamentos ideais e envia uma proposta personalizada. Com a aprovação, agendamos a entrega no local da obra no prazo combinado. </p>
-                </div>
+
+
                 <div onclick="Pergunta( this.id)"  class="pergunta" id="p02">
-                    <p>As máquinas passam por manutenção antes da entrega?</p>
-                    <div class="iconp">
-                        <img src="assets/iconp.png" alt="icone de pergunta"/>
+                    <div class="_01pergunta">
+                        <p>As máquinas passam por manutenção antes da entrega?</p>
+                        <div class="iconp">
+                            <img src="assets/iconp.png" alt="icone de pergunta"/>
+                        </div>
+                    </div>
+                    <div class="resposta" id="r02">
+                        <p>Sim. Todas as máquinas são revisadas e testadas antes de cada locação, garantindo segurança e performance desde o primeiro uso.</p>
                     </div>
                 </div>
-                <div class="resposta" id="r02">
-                    <p>Sim. Todas as máquinas são revisadas e testadas antes de cada locação, garantindo segurança e performance desde o primeiro uso.</p>
-                </div>
+                
+                
                 <div onclick="Pergunta( this.id)"  class="pergunta" id="p03">
-                    <p>Oferecem suporte técnico durante a locação?</p>
-                    <div class="iconp">
-                        <img src="assets/iconp.png" alt="icone de pergunta"/>
+                    <div class="_01pergunta">
+                        <p>Oferecem suporte técnico durante a locação?</p>
+                        <div class="iconp">
+                            <img src="assets/iconp.png" alt="icone de pergunta"/>
+                        </div>
+                    </div>
+                    <div  class="resposta" id="r03">
+                        <p>Com certeza! Nossa equipe técnica está disponível para orientações e suporte sempre que necessário, garantindo o bom funcionamento do equipamento durante todo o período contratado.</p>
                     </div>
                 </div>
-                <div  class="resposta" id="r03">
-                    <p>Com certeza! Nossa equipe técnica está disponível para orientações e suporte sempre que necessário, garantindo o bom funcionamento do equipamento durante todo o período contratado.</p>
-                </div>
+                
                 <div onclick="Pergunta( this.id)"  class="pergunta" id="p04">
-                    <p>É possível ajustar prazos ou renovar o contrato de locação?</p>
-                    <div class="iconp">
-                        <img src="assets/iconp.png" alt="icone de pergunta"/>
+                    <div class="_01pergunta">
+                        <p>É possível ajustar prazos ou renovar o contrato de locação?</p>
+                        <div class="iconp">
+                            <img src="assets/iconp.png" alt="icone de pergunta"/>
+                        </div>
                     </div>
-                </div>
-                <div class="resposta" id="r04">
-                    <p>Sim. Trabalhamos com flexibilidade nos prazos e oferecemos opções de renovação conforme a evolução do seu projeto. Basta entrar em contato com nosso atendimento para ajustar as condições.</p>
+                    <div class="resposta" id="r04">
+                        <p>Sim. Trabalhamos com flexibilidade nos prazos e oferecemos opções de renovação conforme a evolução do seu projeto. Basta entrar em contato com nosso atendimento para ajustar as condições.</p>
+                    </div>
                 </div>
             </div>
 
@@ -222,11 +264,20 @@
 
         <section id="Formulario">
             <div id="containerForm">
+                <div id="LogoBigForm">
+                    <img src="assets/logoBig.png" alt="logo Boig" />
+                    <h1> Pronto para transformar seu projeto em realidade?</h1>
+                    <p>
+                        
+                        Na CH Terra, sabemos que cada obra é única — por isso, oferecemos equipamentos de alta performance, entrega rápida e suporte especializado para você avançar com segurança e eficiência.
+                        Preencha o formulário abaixo e encontre a máquina certa para a sua necessidade.
+                    </p>
+                </div>
                 <div id="Form">
                     <div id="f">
-                        <input id="nome" placeholder="  Nome Completo" type="text"/>
-                        <input id="email" placeholder="  E-mail" type="email"/>
-                        <input id="contato" placeholder="  Contato" type="number"/>
+                        <input id="nome" placeholder="  *Nome Completo" type="text"/>
+                        <input id="email" placeholder="  *E-mail" type="email"/>
+                        <input id="contato" placeholder="  *Contato" type="number"/>
                         <textarea id="description" placeholder=" Descreva sua necessidade " 
                         id="mensagem" name="mensagem" rows="3" cols="0"></textarea>
                         <button onclick="Orcamento()"  id="submit">Fale com um especialista</button>
@@ -239,11 +290,20 @@
     </section>
 
     <footer>
-        <p>📧 contato@chterra.com.br | 📞 (11) 98165-1780<br>
-        📍 Jardim São Luís, São Paulo - SP, 05845-300| 🕗 Atendimento: 8h às 18h<br/>
-        <a id="dev" href="https://www.instagram.com/cristatus.oficial/" target="_blank">Developd By Cristatus</a>
-        </p>
-    
-      </footer>
+        <div id="SocialRede">
+            <a  target="_blank" href="https://www.instagram.com/ch.terra/"><img src="assets/insta.png" alt="logo instagram"/></a>
+            <a target="_blank" href="https://wa.me/5511981651780?text=vim%20atrav%C3%A9s%20da%20sua%20p%C3%A1gina%20de%20loca%C3%A7%C3%A3o%20de%20m%C3%A1quinas%20queria%20mais%20informa%C3%A7%C3%B5es%20a%20respeito
+            "><img src="assets/wh.png" alt="logo whatsapp"/></a>
+            <a href=""><img src="assets/lk.png" alt="logo linkedin"/></a>
+        </div>
+        <div id="Indereço">
+            <p class="pFooter">CHTERRA - Todos os direitos reservado</p>
+        </div>  
+        <div id="developer">
+            <p>Desenvolvido pela:</p>
+            <a href="https://www.instagram.com/cristatus.oficial/"><img id="logoDEveloper" src="assets/Logo.png" alt="logoCristatus"/></a>
+        </div>
+           
+    </footer>
 </body>
 </html>
