@@ -226,9 +226,10 @@
 #beneficios h1 {
     padding-top: 30px;
     font-family: "Horizon";
-    color: white;
+    color:#f39b1f;
     text-align: center;
     padding-bottom: 50px;
+    font-family: 50px;
 }
 #ContainerObjetivos{
     width: 90%;
@@ -241,11 +242,19 @@
     width: 20%;
     background: linear-gradient(90deg, #f39b1f, #b3aea9);
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 3px 1px 10px #000000;
 }
+.imgBeneficio {
+    width: 100%;
+    margin-top: 0;
+    border-radius: 10px 10px;
+}.imgBeneficio img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px; 
+}
 .IMGCARD {
-    width: 50px;
+    width: 100px;
 }
 .tituloCard{
     font-family: "Montserrat";
@@ -323,7 +332,6 @@
         margin-left: 10%;
     }
 }
-
 
 #ComCHTERRA{
     width: 90%;
