@@ -17,8 +17,9 @@
                 var resposta = document.querySelector('#r01');
                 if(resposta.style.display === "block"){
                     resposta.style.display = "none"
-                    document.querySelector(`#${id}`).style.backgroundColor = "#b3aea9"; 
-                    resposta.style.backgroundColor = "#f39b1f";
+                    document.querySelector(`#${id}`).style.background = "linear-gradient(180deg, #cb4017, #f28b0c)";
+
+                    resposta.style.background = "linear-gradient(180deg, #cb4017, #f28b0c)";
                 } else if(resposta.style.display = "none"){
                      resposta.style.display = "block"
                      document.querySelector(`#${id}`).style.backgroundColor = "#f39b1f"; 
@@ -312,13 +313,13 @@
                 
                 <div onclick="Pergunta( this.id)"  class="pergunta" id="p03">
                     <div class="_01pergunta">
-                        <p>Oferecem suporte técnico durante a locação?</p>
+                        <p>O equipamento alugado possui cobertura de seguro?</p>
                         <div class="iconp">
                             <img src="assets/iconp.webp" alt="icone de pergunta"/>
                         </div>
                     </div>
                     <div  class="resposta" id="r03">
-                        <p>Com certeza! Nossa equipe técnica está disponível para orientações e suporte sempre que necessário, garantindo o bom funcionamento do equipamento durante todo o período contratado.</p>
+                        <p>Sim, todos os equipamentos alugados pela CH Terra possuem cobertura de seguro, protegendo sua obra contra imprevistos e garantindo maior segurança durante o uso das máquinas.</p>
                     </div>
                 </div>
                 
