@@ -26,7 +26,8 @@
                         'fade-in': 'fadeIn 1s ease-in-out',
                         'slide-up': 'slideUp 0.8s ease-out',
                         'pulse-slow': 'pulse 3s infinite',
-                        'bounce-slow': 'bounce 2s infinite'
+                        'bounce-slow': 'bounce 2s infinite',
+                        'text-glow': 'textGlow 2s ease-in-out infinite alternate'
                     },
                     keyframes: {
                         fadeIn: {
@@ -36,6 +37,10 @@
                         slideUp: {
                             '0%': { transform: 'translateY(50px)', opacity: '0' },
                             '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        textGlow: {
+                            '0%': { 'text-shadow': '0 0 8px rgba(203, 64, 23, 0.5)' },
+                            '100%': { 'text-shadow': '0 0 16px rgba(242, 139, 12, 0.8)' }
                         }
                     }
                 }
@@ -143,6 +148,22 @@
             max-width: 1200px;
         }
         
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 5rem);
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            animation: textGlow 2s ease-in-out infinite alternate;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.25rem, 2vw, 1.75rem);
+            line-height: 1.4;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
         @media (max-width: 768px) {
             .hero-content {
                 top: 40%;
@@ -150,6 +171,14 @@
             
             .hero-video {
                 height: 70vh;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.25rem;
             }
         }
     </style>
@@ -163,17 +192,18 @@
         
         <div class="hero-content text-center animate-fade-in">
             <div class="max-w-4xl mx-auto">
-                <img src="./assets/tituloHome.webp" alt="Imagem principal - Frase de impacto - Sua obra começa com a máquina certa!" 
-                     class="mx-auto w-full max-w-xl mb-6 float-animation">
+                <h1 class="hero-title font-horizon text-white">
+                    <span class="gradient-text">Sua Obra</span> começa com a <span class="gradient-text">Máquina Certa!</span>
+                </h1>
                 
-                <p class="text-lg md:text-xl font-montserrat mb-8 animate-slide-up" style="animation-delay: 0.2s;">
-                    Na CH Terra, você aluga equipamentos com agilidade, suporte técnico e confiança de quem entende do mercado.
+                <p class="hero-subtitle font-montserrat mb-8 animate-slide-up" style="animation-delay: 0.2s;">
+                    Na CH Terra, você aluga equipamentos com agilidade, segurança e confiança de quem entende do mercado.
                 </p>
                 
-                <button onclick="BTN()" 
-                        class="gradient-bg px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 btn-hover animate-slide-up" 
+                <button onclick="BTN()"
+                        class="gradient-bg px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 btn-hover animate-slide-up"
                         style="animation-delay: 0.4s;">
-                    <i class="fas fa-phone-alt mr-2"></i> Fale com um de nossos especialistas
+                         Fale com um de nossos especialistas
                 </button>
             </div>
         </div>
@@ -195,10 +225,10 @@
                     <p class="text-lg mb-8 font-montserrat">
                         Oferecemos máquinas de alto desempenho para obras de infraestrutura, 
                         movimentação de terra e projetos industriais. Aqui, você não perde 
-                        tempo com burocracia ou manutenção – só trabalha com produtividade.
+                        tempo com burocracia ou manutenção — só trabalha com produtividade.
                     </p>
                     
-                    <button onclick="BTN()" 
+                    <button onclick="BTN()"
                             class="gradient-bg px-6 py-3 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 btn-hover">
                         <i class="fas fa-comments mr-2"></i> Fale com um especialista
                     </button>
@@ -292,7 +322,7 @@
             </div>
             
             <div class="text-center mt-16 animate-slide-up" style="animation-delay: 0.2s;">
-                <button onclick="BTN()" 
+                <button onclick="BTN()"
                         class="gradient-bg px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 btn-hover">
                     <i class="fas fa-file-invoice-dollar mr-2"></i> Solicite um orçamento personalizado
                 </button>
@@ -304,16 +334,16 @@
     <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-80">
         <div class="max-w-7xl mx-auto text-center animate-fade-in">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-horizon mb-8">
-                Focados em entregar mais que <span class="gradient-text">equipamentos</span>
+                Focados em entregar mais que <span class="gradient-text">MÁQUINAS</span>
             </h1>
             
             <p class="text-lg md:text-xl max-w-4xl mx-auto mb-12 font-montserrat">
                 oferecemos estrutura para transformar sua obra em um centro de produtividade.
-                Apoiamos o seu projeto com máquinas de alta performance, suporte técnico e um 
-                planejamento inteligente de locação para garantir resultados extraordinários em cada etapa da obra.
+                Apoiamos o seu projeto com máquinas de alta performance e um 
+                planejamento inteligente de locação para garantir resultados extraordinários em cada etapa.
             </p>
             
-            <button onclick="BTN()" 
+            <button onclick="BTN()"
                     class="gradient-bg px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 btn-hover">
                 <i class="fas fa-handshake mr-2"></i> Conheça nossas soluções
             </button>
@@ -347,10 +377,10 @@
                         <img src="./assets/miniRetro.png" alt="Mini Retroescavadeira" class="h-48 object-contain">
                     </div>
                     <h3 class="text-xl font-bold mb-3 text-center font-montserrat">
-                        <i class="fas fa-digging mr-2"></i> Mini Retroescavadeiras
+                        <i class="fas fa-tractor mr-2" ></i> Mini Retroescavadeiras
                     </h3>
                     <p class="font-montserrat">
-                        Temos mini retroescavadeiras de alta performance disponíveis para locação, ideais para áreas com espaço restrito. Equipadas com rompedor, oferecem eficiência na escavação e quebra de materiais, garantindo precisão, rapidez e menor impacto no ambiente.
+                        Temos mini retroescavadeiras de alta performance disponíveis para locação, ideais para áreas com espaço restrito. Oferecem eficiência na escavação, garantindo precisão, rapidez e menor impacto no ambiente.
                     </p>
                 </div>
                 
@@ -366,10 +396,47 @@
                         Disponibilizamos mini carregadeiras para locação, perfeitas para trabalhos em espaços apertados e com alta demanda de movimentação de materiais. Com potência e agilidade, elas garantem eficiência e rapidez, além de oferecerem versatilidade para diversos tipos de tarefas.
                     </p>
                 </div>
+
+                <div class="gradient-bg rounded-xl p-6 shadow-xl card-hover">
+                    <div class="bg-white rounded-lg p-4 mb-4 flex justify-center">
+                        <img src="./assets/romp.png" alt="Carregadeira" class="h-48 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center font-montserrat">
+                        <i  class="fas fa-digging mr-2"></i> ROMPEDOR
+                    </h3>
+                    <p class="font-montserrat">
+                       Essencial para a demolição de concreto e asfalto, o rompedor é utilizado para quebrar materiais resistentes, facilitando a remoção e reciclagem no local de trabalho.
+                       Sua força e eficiência aceleram significativamente os processos de demolição.
+                    </p>
+                </div>
+                <div class="gradient-bg rounded-xl p-6 shadow-xl card-hover">
+                    <div class="bg-white rounded-lg p-4 mb-4 flex justify-center">
+                        <img src="./assets/cp.png" alt="Carregadeira" class="h-48 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center font-montserrat">
+                        <i  class="fas fa-truck-pickup mr-2""></i> CAMINHÃO PRANCHA
+                    </h3>
+                    <p class="font-montserrat">
+                       Perfeito para o transporte de máquinas pesadas e grandes volumes de carga entre canteiros de obra. O caminhão prancha é fundamental para a logística de construção, garantindo a movimentação segura e eficiente de equipamentos.
+                    </p>
+                </div>
+                <div class="gradient-bg rounded-xl p-6 shadow-xl card-hover">
+                    <div class="bg-white rounded-lg p-4 mb-4 flex justify-center">
+                        <img src="./assets/cb.png" alt="Carregadeira" class="h-48 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center font-montserrat">
+                        <i class="fas fa-truck-pickup mr-2"></i> CAMINHÃO BASCULANTE
+
+                    </h3>
+                    <p class="font-montserrat">
+                       Ideal para o transporte de grandes quantidades de materiais como areia, pedra e terra.
+                        O caminhão basculante é uma peça chave em qualquer obra de terraplenagem, garantindo eficiência no transporte e descarga de materiais.
+                    </p>
+                </div>
             </div>
             
             <div class="text-center mt-16 animate-slide-up" style="animation-delay: 0.2s;">
-                <button onclick="BTN()" 
+                <button onclick="BTN()"
                         class="gradient-bg px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 btn-hover">
                     <i class="fas fa-calendar-check mr-2"></i> Locar equipamento
                 </button>
@@ -465,29 +532,29 @@
                 <form id="f" class="space-y-6">
                     <div>
                         <label for="nome" class="block font-montserrat font-medium mb-2">Nome Completo *</label>
-                        <input id="nome" type="text" 
-                               class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-white placeholder-white placeholder-opacity-70">
+                        <input id="nome" type="text"
+                                class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-white placeholder-white placeholder-opacity-70">
                     </div>
                     
                     <div>
                         <label for="email" class="block font-montserrat font-medium mb-2">E-mail *</label>
-                        <input id="email" type="email" 
-                               class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-white placeholder-white placeholder-opacity-70">
+                        <input id="email" type="email"
+                                class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-white placeholder-white placeholder-opacity-70">
                     </div>
                     
                     <div>
                         <label for="contato" class="block font-montserrat font-medium mb-2">Telefone *</label>
-                        <input id="contato" type="tel" 
-                               class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-white placeholder-white placeholder-opacity-70">
+                        <input id="contato" type="tel"
+                                class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-white placeholder-white placeholder-opacity-70">
                     </div>
                     
                     <div>
                         <label for="description" class="block font-montserrat font-medium mb-2">Descreva sua necessidade *</label>
-                        <textarea id="description" rows="4" 
-                                  class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-white placeholder-white placeholder-opacity-70"></textarea>
+                        <textarea id="description" rows="4"
+                                class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-white placeholder-white placeholder-opacity-70"></textarea>
                     </div>
                     
-                    <button type="button" onclick="Orcamento()" 
+                    <button type="button" onclick="Orcamento()"
                             class="w-full gradient-bg px-6 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 btn-hover">
                         <i class="fas fa-paper-plane mr-2"></i> Enviar solicitação
                     </button>
