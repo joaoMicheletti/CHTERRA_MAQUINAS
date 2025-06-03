@@ -144,18 +144,17 @@
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 10;
-            width: 90%;
+            width: 100%;
             max-width: 1200px;
-            
+            background-color: aqua;
         }
         
         .hero-title {
             margin-top: 120px;
             text-align:start;
-            font-size: clamp(1rem, 3vw, 2rem);
+            font-size: 50px;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            line-height: 53px;
+            line-height: 50px;
             letter-spacing: -1.5px;
             font-weight: 600;
             font-family: "Montserrat";
@@ -164,7 +163,7 @@
         .hero-subtitle {
             text-align: start;
             font-size: clamp(1rem, 1vw, 1rem);
-            line-height: 30px;
+            line-height: 40px;
             max-width: 800px;
             font-weight: 600;
             color: rgb(251 146 60)
@@ -173,6 +172,7 @@
         @media (max-width: 768px) {
             .hero-content {
                 top: 40%;
+                width: 100%;
             }
             
             .hero-video {
@@ -188,6 +188,7 @@
             }
             .hero-title {
             line-height: 40px;
+            font-weight: 500;
         }
         }
        
@@ -200,8 +201,8 @@
             <source src="assets/teste.mp4" type="video/mp4">
         </video>
         
-        <div class="hero-content text-center animate-fade-in">
-            <div class="max-w-4xl mx-auto">
+        <div class="hero-content">
+            <div class="" style="width: 100%;">
                 <h1 class="hero-title text-white">
                     <span  class="gradient-text">Sua Obra</span> <br/>começa com a<br/><span  class="gradient-text">Máquina Certa!</span>
                 </h1>
