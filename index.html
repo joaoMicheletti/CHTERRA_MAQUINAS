@@ -146,22 +146,26 @@
             z-index: 10;
             width: 90%;
             max-width: 1200px;
+            
         }
         
         .hero-title {
-            font-size: clamp(2.5rem, 5vw, 5rem);
-            line-height: 1.1;
+            margin-top: 120px;
+            text-align:start;
+            font-size: clamp(1rem, 5vw, 4rem);
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 1.5rem;
-            animation: textGlow 2s ease-in-out infinite alternate;
+            line-height: 53px;
+            letter-spacing: -1px;
+            font-weight: 600;
         }
         
         .hero-subtitle {
-            font-size: clamp(1.25rem, 2vw, 1.75rem);
-            line-height: 1.4;
+            text-align: start;
+            font-size: clamp(1rem, 1vw, 1rem);
+            line-height: 30px;
             max-width: 800px;
-            margin: 0 auto 2rem;
+            font-weight: 600;
         }
         
         @media (max-width: 768px) {
@@ -180,7 +184,11 @@
             .hero-subtitle {
                 font-size: 1.25rem;
             }
+            .hero-title {
+            line-height: 40px;
         }
+        }
+       
     </style>
 </head>
 <body class="text-white">
@@ -192,18 +200,18 @@
         
         <div class="hero-content text-center animate-fade-in">
             <div class="max-w-4xl mx-auto">
-                <h1 class="hero-title font-horizon text-white">
-                    <span class="gradient-text">Sua Obra</span> começa com a <span class="gradient-text">Máquina Certa!</span>
+                <h1 class="hero-title text-white">
+                    <span  class="gradient-text">Sua Obra</span> <br/>começa com a<br/><span  class="gradient-text">Máquina Certa!</span>
                 </h1>
                 
                 <p class="hero-subtitle font-montserrat mb-8 animate-slide-up" style="animation-delay: 0.2s;">
                     Na CH Terra, você aluga equipamentos com agilidade, segurança e confiança de quem entende do mercado.
                 </p>
                 
-                <button onclick="BTN()"
+                <button style="width: 100%;" onclick="BTN()"
                         class="gradient-bg px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 btn-hover animate-slide-up"
                         style="animation-delay: 0.4s;">
-                         Fale com um de nossos especialistas
+                         FALE COM UM DE NOSSOS EXPECIALISTAS
                 </button>
             </div>
         </div>
@@ -230,7 +238,7 @@
                     
                     <button onclick="BTN()"
                             class="gradient-bg px-6 py-3 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 btn-hover">
-                        <i class="fas fa-comments mr-2"></i> Fale com um especialista
+                        FALE COM UM EXPECIALISTA
                     </button>
                 </div>
                 
@@ -274,7 +282,7 @@
                         <img src="assets/equipamento.webp" alt="Equipamentos revisados" class="w-full h-48 object-cover">
                     </div>
                     <h3 class="text-xl font-bold mb-3 font-montserrat">
-                        <i class="fas fa-check-circle mr-2"></i> Equipamentos revisados
+                         Equipamentos revisados
                     </h3>
                     <p class="font-montserrat">
                         Máquinas sempre inspecionadas e disponíveis para operação no momento da entrega, garantindo eficiência desde o primeiro dia.
@@ -287,7 +295,7 @@
                         <img src="assets/locacao.webp" alt="Logística rápida" class="w-full h-48 object-cover">
                     </div>
                     <h3 class="text-xl font-bold mb-3 font-montserrat">
-                        <i class="fas fa-truck-fast mr-2"></i> Logística rápida
+                        Logística rápida
                     </h3>
                     <p class="font-montserrat">
                         Atendimento ágil com entregas programadas e monitoradas para você não perder tempo em sua obra.
@@ -300,7 +308,7 @@
                         <img src="assets/equipeT.webp" alt="Variedade de equipamentos" class="w-full h-48 object-cover">
                     </div>
                     <h3 class="text-xl font-bold mb-3 font-montserrat">
-                        <i class="fas fa-cogs mr-2"></i> Grande Variedade
+                        Grande Variedade
                     </h3>
                     <p class="font-montserrat">
                         Contamos com uma ampla frota de máquinas prontas para atender às necessidades do seu projeto.
@@ -313,7 +321,7 @@
                         <img src="assets/contrato.webp" alt="Flexibilidade de prazos" class="w-full h-48 object-cover">
                     </div>
                     <h3 class="text-xl font-bold mb-3 font-montserrat">
-                        <i class="fas fa-file-contract mr-2"></i> Flexibilidade
+                        Flexibilidade
                     </h3>
                     <p class="font-montserrat">
                         Soluções sob medida para a sua necessidade, com opções de locação adaptadas ao seu ritmo e orçamento.
@@ -323,8 +331,8 @@
             
             <div class="text-center mt-16 animate-slide-up" style="animation-delay: 0.2s;">
                 <button onclick="BTN()"
-                        class="gradient-bg px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 btn-hover">
-                    <i class="fas fa-file-invoice-dollar mr-2"></i> Solicite um orçamento personalizado
+                    class="gradient-bg px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 btn-hover">
+                    SOLICITAR UM ORÇAMENTO PERSONALIZADO
                 </button>
             </div>
         </div>
@@ -338,14 +346,14 @@
             </h1>
             
             <p class="text-lg md:text-xl max-w-4xl mx-auto mb-12 font-montserrat">
-                oferecemos estrutura para transformar sua obra em um centro de produtividade.
+                Oferecemos estrutura para transformar sua obra em um centro de produtividade.
                 Apoiamos o seu projeto com máquinas de alta performance e um 
                 planejamento inteligente de locação para garantir resultados extraordinários em cada etapa.
             </p>
             
             <button onclick="BTN()"
-                    class="gradient-bg px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 btn-hover">
-                <i class="fas fa-handshake mr-2"></i> Conheça nossas soluções
+                class="gradient-bg px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 btn-hover">
+                CONHEÇA NOSSAS SOLUÇÕES
             </button>
         </div>
     </section>
@@ -360,37 +368,49 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 animate-slide-up">
                 <!-- Machine Card 1 -->
                 <div class="gradient-bg rounded-xl p-6 shadow-xl card-hover">
-                    <div class="bg-white rounded-lg p-4 mb-4 flex justify-center">
-                        <img src="./assets/retro.webp" alt="Retroescavadeira" class="h-48 object-contain">
+                    <div class=" rounded-lg p-4 mb-4 flex justify-center">
+                        <img src="./assets/retro.webp" alt="Retroescavadeira" class="h-48 object-contain" >
                     </div>
                     <h3 class="text-xl font-bold mb-3 text-center font-montserrat">
-                        <i class="fas fa-tractor mr-2"></i> Retroescavadeiras
+                       Retroescavadeiras
                     </h3>
                     <p class="font-montserrat">
-                        Temos disponíveis para locação retroescavadeiras de 14, 15, 16 e 18 toneladas, ideais para diferentes tipos de obras. Seja para escavação em espaços apertados ou grandes projetos de infraestrutura, nossa frota oferece máxima eficiência, potência e versatilidade.
+                        Nossa retroescavadeiras é ideais para diferentes tipos de obras. Seja para escavação em espaços apertados ou grandes projetos de infraestrutura, nossa frota oferece máxima eficiência, potência e versatilidade.
+                    </p>
+                </div>
+                <div class="gradient-bg rounded-xl p-6 shadow-xl card-hover">
+                    <div class=" rounded-lg p-4 mb-4 flex justify-center">
+                        <img src="./assets/escavadeira.webp" alt="Retroescavadeira" class="h-48 object-contain"  >
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center font-montserrat">
+                       ESCAVADEIRA HIDRAULICA
+                    </h3>
+                    <p class="font-montserrat">
+                        Indicada para escavações profundas e grandes movimentações de terra, a escavadeira hidráulica é conhecida por sua força e eficiência.
+Este equipamento é ideal para a preparação de terrenos, mineração e grandes projetos de infraestrutura.
                     </p>
                 </div>
                 
                 <!-- Machine Card 2 -->
                 <div class="gradient-bg rounded-xl p-6 shadow-xl card-hover">
-                    <div class="bg-white rounded-lg p-4 mb-4 flex justify-center">
-                        <img src="./assets/miniRetro.webp" alt="Mini Retroescavadeira" class="h-48 object-contain">
+                    <div class=" rounded-lg p-4 mb-4 flex justify-center">
+                        <img src="./assets/miniRetro.webp" alt="Mini Retroescavadeira" class="h-48 object-contain" style="border-radius: 10px;" >
                     </div>
                     <h3 class="text-xl font-bold mb-3 text-center font-montserrat">
-                        <i class="fas fa-tractor mr-2" ></i> Mini Retroescavadeiras
+                         Mini Escavadeira
                     </h3>
                     <p class="font-montserrat">
-                        Temos mini retroescavadeiras de alta performance disponíveis para locação, ideais para áreas com espaço restrito. Oferecem eficiência na escavação, garantindo precisão, rapidez e menor impacto no ambiente.
+                        Temos mini Escavadeira de alta performance disponíveis para locação, ideais para áreas com espaço restrito. Oferecem eficiência na escavação, garantindo precisão, rapidez e menor impacto no ambiente.
                     </p>
                 </div>
                 
                 <!-- Machine Card 3 -->
                 <div class="gradient-bg rounded-xl p-6 shadow-xl card-hover">
-                    <div class="bg-white rounded-lg p-4 mb-4 flex justify-center">
-                        <img src="./assets/carregadeira.webp" alt="Carregadeira" class="h-48 object-contain">
+                    <div class=" rounded-lg p-4 mb-4 flex justify-center">
+                        <img src="./assets/carregadeira.webp" alt="Carregadeira" class="h-48 object-contain" style="border-radius: 10px;" >
                     </div>
                     <h3 class="text-xl font-bold mb-3 text-center font-montserrat">
-                        <i class="fas fa-truck-pickup mr-2"></i> Mini Carregadeiras
+                        Mini Carregadeiras Bobcat
                     </h3>
                     <p class="font-montserrat">
                         Disponibilizamos mini carregadeiras para locação, perfeitas para trabalhos em espaços apertados e com alta demanda de movimentação de materiais. Com potência e agilidade, elas garantem eficiência e rapidez, além de oferecerem versatilidade para diversos tipos de tarefas.
@@ -398,11 +418,11 @@
                 </div>
 
                 <div class="gradient-bg rounded-xl p-6 shadow-xl card-hover">
-                    <div class="bg-white rounded-lg p-4 mb-4 flex justify-center">
+                    <div class=" rounded-lg p-4 mb-4 flex justify-center">
                         <img src="./assets/romp.webp" alt="Carregadeira" class="h-48 object-contain">
                     </div>
                     <h3 class="text-xl font-bold mb-3 text-center font-montserrat">
-                        <i  class="fas fa-digging mr-2"></i> ROMPEDOR
+                        ROMPEDOR
                     </h3>
                     <p class="font-montserrat">
                        Essencial para a demolição de concreto e asfalto, o rompedor é utilizado para quebrar materiais resistentes, facilitando a remoção e reciclagem no local de trabalho.
@@ -410,22 +430,22 @@
                     </p>
                 </div>
                 <div class="gradient-bg rounded-xl p-6 shadow-xl card-hover">
-                    <div class="bg-white rounded-lg p-4 mb-4 flex justify-center">
-                        <img src="./assets/cp.webp" alt="Carregadeira" class="h-48 object-contain">
+                    <div class=" rounded-lg p-4 mb-4 flex justify-center">
+                        <img src="./assets/cp.webp"  alt="Carregadeira" class="h-48 object-contain" style="border-radius: 10px;" >
                     </div>
                     <h3 class="text-xl font-bold mb-3 text-center font-montserrat">
-                        <i  class="fas fa-truck-pickup mr-2""></i> CAMINHÃO PRANCHA
+                         CAMINHÃO PRANCHA
                     </h3>
                     <p class="font-montserrat">
                        Perfeito para o transporte de máquinas pesadas e grandes volumes de carga entre canteiros de obra. O caminhão prancha é fundamental para a logística de construção, garantindo a movimentação segura e eficiente de equipamentos.
                     </p>
                 </div>
                 <div class="gradient-bg rounded-xl p-6 shadow-xl card-hover">
-                    <div class="bg-white rounded-lg p-4 mb-4 flex justify-center">
-                        <img src="./assets/cb.webp" alt="Carregadeira" class="h-48 object-contain">
+                    <div class=" rounded-lg p-4 mb-4 flex justify-center">
+                        <img src="./assets/cb.webp" alt="Carregadeira" class="h-48 object-contain" style="border-radius: 10px;" >
                     </div>
                     <h3 class="text-xl font-bold mb-3 text-center font-montserrat">
-                        <i class="fas fa-truck-pickup mr-2"></i> CAMINHÃO BASCULANTE
+                        CAMINHÃO BASCULANTE
 
                     </h3>
                     <p class="font-montserrat">
@@ -438,7 +458,7 @@
             <div class="text-center mt-16 animate-slide-up" style="animation-delay: 0.2s;">
                 <button onclick="BTN()"
                         class="gradient-bg px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 btn-hover">
-                    <i class="fas fa-calendar-check mr-2"></i> Locar equipamento
+                    LOCAR EQUIPAMENTO
                 </button>
             </div>
         </div>
@@ -521,10 +541,10 @@
             <div class="text-center mb-16 animate-fade-in">
                 <img src="assets/logoBig.webp" alt="Logo CH Terra" class="mx-auto w-48 mb-6">
                 <h1 class="text-3xl md:text-4xl lg:text-5xl font-horizon mb-4">
-                    Pronto para transformar seu projeto em realidade?
+                transformE seu projeto em realidade!
                 </h1>
                 <p class="text-lg max-w-3xl mx-auto font-montserrat">
-                    Na CH Terra, sabemos que cada obra é única — por isso, oferecemos equipamentos de alta performance, entrega rápida e suporte especializado para você avançar com segurança e eficiência.
+                    Na CH TERRA, sabemos que cada obra é única. Preencha o formulário e conte com equipamentos de alta performance, entrega rápida e suporte especializado para avançar com segurança e eficiência.
                 </p>
             </div>
             
@@ -555,8 +575,8 @@
                     </div>
                     
                     <button type="button" onclick="Orcamento()"
-                            class="w-full gradient-bg px-6 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 btn-hover">
-                        <i class="fas fa-paper-plane mr-2"></i> Enviar solicitação
+                        class="w-full gradient-bg px-6 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 btn-hover">
+                        ENVIAR SOLICITAÇÃO
                     </button>
                 </form>
             </div>
