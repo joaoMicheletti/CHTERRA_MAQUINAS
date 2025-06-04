@@ -71,10 +71,12 @@
         }
         
         .gradient-text {
-            background: linear-gradient(180deg, #cb4017, #f28b0c);
+            background: linear-gradient(90deg, #cb4017, #f28b0c );
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
+
+            
         }
         
         .card-hover {
@@ -144,29 +146,29 @@
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 10;
-            width: 100%;
+            width: 80%;
             max-width: 1200px;
+            font-weight: 480;
         }
         
         .hero-title {
-            margin-top: 120px;
             text-align:start;
             font-size: 50px;
             text-transform: uppercase;
             line-height: 50px;
             letter-spacing: -1.5px;
-            font-weight: 600;
             font-family: "Montserrat";
         }
         
         .hero-subtitle {
+            font-family: "Montserrat";
             margin-top: 20px;
             text-align: start;
-            font-size: clamp(1rem, 1vw, 1rem);
+            font-size: clamp(1.5rem, 1vw, 1rem);
             line-height: 20px;
             max-width: 800px;
-            font-weight: 600;
-            color: rgba(251, 146, 60, 0.911)
+            font-weight: 700;
+            color: rgba(251, 146, 60)
         }
         
         @media (max-width: 768px) {
@@ -188,7 +190,6 @@
             }
             .hero-title {
             line-height: 40px;
-            font-weight: 500;
         }
         }
        
@@ -203,8 +204,8 @@
         
         <div class="hero-content">
             <div class="" style="width: 100%;">
-                <h1 class="hero-title text-white">
-                    <span  class="gradient-text">Sua Obra</span> <br/>começa com a<br/><span  class="gradient-text">Máquina Certa!</span>
+                <h1 class="hero-title text-white text-5xl md:text-6xl lg:text-7xl mb-4">
+                    <span  class="gradient-text">Sua Obra</span> <br/>começa com a<br/><span>Máquina Certa!</span>
                 </h1>
                 
                 <p class="hero-subtitle font-montserrat mb-8 animate-slide-up" style="animation-delay: 0.2s;">
@@ -224,7 +225,7 @@
     <div class="gradient-bg h-2 w-full"></div>
     
     <!-- Second Section -->
-    <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-70">
+    <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-10">
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-1/2 animate-slide-up">
@@ -272,7 +273,7 @@
     </section>
     
     <!-- Benefits Section -->
-    <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-70">
+    <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-10">
         <div class="max-w-7xl mx-auto">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-horizon text-center mb-16 animate-fade-in">
                 Nossos <span class="gradient-text">benefícios</span>
@@ -342,7 +343,7 @@
     </section>
     
     <!-- About Section -->
-    <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-80">
+    <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-10">
         <div class="max-w-7xl mx-auto text-center animate-fade-in">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-horizon mb-8">
                 Focados em entregar mais que <span class="gradient-text">MÁQUINAS</span>
@@ -362,7 +363,7 @@
     </section>
     
     <!-- Machines Section -->
-    <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-70">
+    <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-10">
         <div class="max-w-7xl mx-auto">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-horizon text-center mb-16 animate-fade-in">
                 Nossos <span class="gradient-text">equipamentos</span>
@@ -375,61 +376,10 @@
                         <img src="./assets/retro.webp" alt="Retroescavadeira" class="h-48 object-contain" >
                     </div>
                     <h3 class="text-xl font-bold mb-3 text-center font-montserrat">
-                       Retroescavadeiras
+                       RETROESCAVADEIRA
                     </h3>
                     <p class="font-montserrat">
-                        Nossa retroescavadeiras é ideais para diferentes tipos de obras. Seja para escavação em espaços apertados ou grandes projetos de infraestrutura, nossa frota oferece máxima eficiência, potência e versatilidade.
-                    </p>
-                </div>
-                <div class="gradient-bg rounded-xl p-6 shadow-xl card-hover">
-                    <div class=" rounded-lg p-4 mb-4 flex justify-center">
-                        <img src="./assets/escavadeira.webp" alt="Retroescavadeira" class="h-48 object-contain"  >
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-center font-montserrat">
-                       ESCAVADEIRA HIDRAULICA
-                    </h3>
-                    <p class="font-montserrat">
-                        Indicada para escavações profundas e grandes movimentações de terra, a escavadeira hidráulica é conhecida por sua força e eficiência.
-Este equipamento é ideal para a preparação de terrenos, mineração e grandes projetos de infraestrutura.
-                    </p>
-                </div>
-                
-                <!-- Machine Card 2 -->
-                <div class="gradient-bg rounded-xl p-6 shadow-xl card-hover">
-                    <div class=" rounded-lg p-4 mb-4 flex justify-center">
-                        <img src="./assets/miniRetro.webp" alt="Mini Retroescavadeira" class="h-48 object-contain" style="border-radius: 10px;" >
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-center font-montserrat">
-                         Mini Escavadeira
-                    </h3>
-                    <p class="font-montserrat">
-                        Temos mini Escavadeira de alta performance disponíveis para locação, ideais para áreas com espaço restrito. Oferecem eficiência na escavação, garantindo precisão, rapidez e menor impacto no ambiente.
-                    </p>
-                </div>
-                
-                <!-- Machine Card 3 -->
-                <div class="gradient-bg rounded-xl p-6 shadow-xl card-hover">
-                    <div class=" rounded-lg p-4 mb-4 flex justify-center">
-                        <img src="./assets/carregadeira.webp" alt="Carregadeira" class="h-48 object-contain" style="border-radius: 10px;" >
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-center font-montserrat">
-                        Mini Carregadeiras Bobcat
-                    </h3>
-                    <p class="font-montserrat">
-                        Disponibilizamos mini carregadeiras para locação, perfeitas para trabalhos em espaços apertados e com alta demanda de movimentação de materiais. Com potência e agilidade, elas garantem eficiência e rapidez, além de oferecerem versatilidade para diversos tipos de tarefas.
-                    </p>
-                </div>
-
-                <div class="gradient-bg rounded-xl p-6 shadow-xl card-hover">
-                    <div class=" rounded-lg p-4 mb-4 flex justify-center">
-                        <img src="./assets/romp.webp" alt="Carregadeira" class="h-48 object-contain">
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-center font-montserrat">
-                        ROMPEDOR
-                    </h3>
-                    <p class="font-montserrat">
-                       Essencial para a demolição de concreto e asfalto, o rompedor é utilizado para quebrar materiais resistentes, facilitando a remoção e reciclagem no local de trabalho.
-                       Sua força e eficiência aceleram significativamente os processos de demolição.
+                        Nossa retroescavadeira é o equipamentoideais para diferentes tipos de obras. Seja para escavação em espaços apertados ou grandes projetos de infraestrutura, nossa frota oferece máxima eficiência, potência e versatilidade.
                     </p>
                 </div>
                 <div class="gradient-bg rounded-xl p-6 shadow-xl card-hover">
@@ -456,6 +406,95 @@ Este equipamento é ideal para a preparação de terrenos, mineração e grandes
                         O caminhão basculante é uma peça chave em qualquer obra de terraplenagem, garantindo eficiência no transporte e descarga de materiais.
                     </p>
                 </div>
+
+
+                <div class="gradient-bg rounded-xl p-6 shadow-xl card-hover">
+                    <div class=" rounded-lg p-4 mb-4 flex justify-center">
+                        <img src="./assets/escavadeira.webp" alt="Retroescavadeira" class="h-48 object-contain"  >
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center font-montserrat">
+                       ESCAVADEIRA HIDRAULICA
+                    </h3>
+                    <p class="font-montserrat">
+                        Indicada para escavações profundas e grandes movimentações de terra. 
+                        A escavadeira hidráulica é conhecida por sua força e eficiência.
+                        Este equipamento é ideal para a preparação de terrenos, mineração 
+                        e grandes projetos de infraestrutura.
+                    </p>
+                </div>
+
+                <div class="gradient-bg rounded-xl p-6 shadow-xl card-hover">
+                    <div class=" rounded-lg p-4 mb-4 flex justify-center">
+                        <img src="./assets/romp.webp" alt="Carregadeira" class="h-48 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center font-montserrat">
+                        ROMPEDOR
+                    </h3>
+                    <p class="font-montserrat">
+                       Essencial para a demolição de concreto e asfalto, o rompedor é utilizado para quebrar materiais resistentes, facilitando a remoção e reciclagem no local de trabalho.
+                       Sua força e eficiência aceleram significativamente os processos de demolição.
+                    </p>
+                </div>
+                
+                <!-- ROLO COMPACTADOR -->
+
+                <div class="gradient-bg rounded-xl p-6 shadow-xl card-hover">
+                    <div class=" rounded-lg p-4 mb-4 flex justify-center">
+                        <img src="./assets/rolo-compactador-ideal.png" alt="Mini Retroescavadeira" class="h-48 object-contain" style="border-radius: 10px;" >
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center font-montserrat">
+                         ROLO COMPACTADOR
+                    </h3>
+                    <p class="font-montserrat">
+                        Essencial para projetos de pavimentação 
+                        e compactação de grandes superfícies planas,
+                        como estradas e fundações.
+                        O rolo compactador liso garante um acabamento 
+                        uniforme e eficaz, crucial para a estabilidade e durabilidade do pavimento.
+                    </p>
+                </div>
+
+                <div class="gradient-bg rounded-xl p-6 shadow-xl card-hover">
+                    <div class=" rounded-lg p-4 mb-4 flex justify-center">
+                        <img src="./assets/miniRetro.webp" alt="Mini Retroescavadeira" class="h-48 object-contain" style="border-radius: 10px;" >
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center font-montserrat">
+                         MINI ESCAVADEIRA
+                    </h3>
+                    <p class="font-montserrat">
+                        Temos mini Escavadeiras de alta performance 
+                        disponíveis para locação, ideais para áreas 
+                        com espaço restrito. Oferecem eficiência na escavação, 
+                        garantindo precisão, rapidez e menor impacto no ambiente.
+                    </p>
+                </div>
+                
+                <!-- Machine Card 3 -->
+                <div class="gradient-bg rounded-xl p-6 shadow-xl card-hover">
+                    <div class=" rounded-lg p-4 mb-4 flex justify-center">
+                        <img src="./assets/carregadeira.webp" alt="Carregadeira" class="h-48 object-contain" style="border-radius: 10px;" >
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center font-montserrat">
+                        MINI CARREGADEIRA
+                    </h3>
+                    <p class="font-montserrat">
+                        Disponibilizamos mini carregadeiras para locação, perfeitas para trabalhos em espaços apertados e com alta demanda de movimentação de materiais. Com potência e agilidade, elas garantem eficiência e rapidez, além de oferecerem versatilidade para diversos tipos de tarefas.
+                    </p>
+                </div>
+                <div class="gradient-bg rounded-xl p-6 shadow-xl card-hover">
+                    <div class=" rounded-lg p-4 mb-4 flex justify-center">
+                        <img src="./assets/compactadora-CB24-640x480.jpg" alt="Carregadeira" class="h-48 object-contain" style="border-radius: 10px;" >
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center font-montserrat">
+                        MINI ROLO COMPACTADOR
+                    </h3>
+                    <p class="font-montserrat">
+                        Essencial para projetos de pavimentação e compactação de pequenas superfícies, como 
+                        calçadas residenciais, estacionamentos e acessos de difícil manobra. O mini rolo 
+                        compactador liso oferece alta mobilidade e versatilidade, garantindo um acabamento uniforme e eficaz,
+                        ideal para assegurar a estabilidade e durabilidade do pavimento em espaços reduzidos.
+                    </p>
+                </div>
             </div>
             
             <div class="text-center mt-16 animate-slide-up" style="animation-delay: 0.2s;">
@@ -468,7 +507,7 @@ Este equipamento é ideal para a preparação de terrenos, mineração e grandes
     </section>
     
     <!-- FAQ Section -->
-    <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-80">
+    <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-10">
         <div class="max-w-7xl mx-auto">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-horizon text-center mb-16 animate-fade-in">
                 Perguntas <span class="gradient-text">frequentes</span>
@@ -539,7 +578,7 @@ Este equipamento é ideal para a preparação de terrenos, mineração e grandes
     </section>
     
     <!-- Contact Form -->
-    <section id="Formulario" class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-70">
+    <section id="Formulario" class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-10">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 animate-fade-in">
                 <img src="assets/logoBig.webp" alt="Logo CH Terra" class="mx-auto w-48 mb-6">
@@ -547,7 +586,7 @@ Este equipamento é ideal para a preparação de terrenos, mineração e grandes
                 transformE seu projeto em realidade!
                 </h1>
                 <p class="text-lg max-w-3xl mx-auto font-montserrat">
-                    Na CH TERRA, sabemos que cada obra é única. Preencha o formulário e conte com equipamentos de alta performance, entrega rápida e suporte especializado para avançar com segurança e eficiência.
+                    Preencha o formulário e conte com equipamentos de alta performance, entrega rápida e suporte especializado para avançar com segurança e eficiência.
                 </p>
             </div>
             
