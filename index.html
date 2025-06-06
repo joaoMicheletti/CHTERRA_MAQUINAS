@@ -146,14 +146,14 @@
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 10;
-            width: 80%;
+            width: 90%;
             max-width: 1200px;
             font-weight: 480;
         }
         
         .hero-title {
             text-align:start;
-            font-size: 50px;
+            font-size: 53px;
             text-transform: uppercase;
             line-height: 50px;
             letter-spacing: -1.5px;
@@ -190,7 +190,22 @@
             }
             .hero-title {
             line-height: 40px;
-        }
+            }
+            #produtividade{
+                font-size: 20px;
+            }
+            #nossosB{
+                text-align: center;
+                font-size: 28px;
+            }
+            #nossosE{
+                text-align: center;
+                font-size: 28px;
+            }
+            #perguntasF{
+                text-align: center;
+                font-size: 28px;
+            }
         }
        
     </style>
@@ -215,7 +230,7 @@
                 <button style="width: 100%;" onclick="BTN()"
                         class="gradient-bg px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 btn-hover animate-slide-up"
                         style="animation-delay: 0.4s;">
-                         FALE COM UM DE NOSSOS EXPECIALISTAS
+                         FALE COM UM DE NOSSOS ESPECIALISTAS
                 </button>
             </div>
         </div>
@@ -229,7 +244,7 @@
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-1/2 animate-slide-up">
-                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-horizon mb-6">
+                    <h1 id="produtividade" class="text-3xl md:text-4xl lg:text-5xl font-horizon mb-6">
                         Produtividade sem limites: <br>
                         <span class="gradient-text">locação de máquinas</span> para quem não pode parar
                     </h1>
@@ -242,7 +257,7 @@
                     
                     <button onclick="BTN()"
                             class="gradient-bg px-6 py-3 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 btn-hover">
-                        FALE COM UM EXPECIALISTA
+                        FALE COM UM ESPECIALISTA
                     </button>
                 </div>
                 
@@ -275,7 +290,7 @@
     <!-- Benefits Section -->
     <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-10">
         <div class="max-w-7xl mx-auto">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-horizon text-center mb-16 animate-fade-in">
+            <h1 id="nossosB" class="text-4xl md:text-5xl lg:text-6xl font-horizon text-center mb-16 animate-fade-in">
                 Nossos <span class="gradient-text">benefícios</span>
             </h1>
             
@@ -365,7 +380,7 @@
     <!-- Machines Section -->
     <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-10">
         <div class="max-w-7xl mx-auto">
-            <h1 class="text-3xl font-horizon text-center mb-16 animate-fade-in">
+            <h1 style="text-align: center;" id="nossosE" class="text-4xl md:text-5xl lg:text-6xl font-horizon mb-8">
                 Nossos <span class="gradient-text">equipamentos</span>
             </h1>
             
@@ -511,7 +526,7 @@
     <!-- FAQ Section -->
     <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-10">
         <div class="max-w-7xl mx-auto">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-horizon text-center mb-16 animate-fade-in">
+            <h1 style="text-align: center;" id="perguntasF" class="text-4xl md:text-5xl lg:text-6xl font-horizon mb-8">
                 Perguntas <span class="gradient-text">frequentes</span>
             </h1>
             
@@ -587,7 +602,7 @@
                 <h1 class="text-3xl md:text-4xl lg:text-5xl font-horizon mb-4">
                 transformE seu projeto em realidade!
                 </h1>
-                <p class="text-lg max-w-3xl mx-auto font-montserrat">
+                <p style="font-size: 25px;" class="text-lg max-w-3xl mx-auto font-montserrat">
                     Preencha o formulário e conte com equipamentos de alta performance, entrega rápida e suporte especializado para avançar com segurança e eficiência.
                 </p>
             </div>
