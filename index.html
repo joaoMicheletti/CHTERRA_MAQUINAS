@@ -57,6 +57,9 @@
         * {
             scroll-behavior: smooth;
         }
+        .font-horizon {
+            font-family: 'Horizon-updated', sans-serif;
+        }
         
         body {
             background-image: url('assets/bg.webp');
@@ -148,16 +151,14 @@
             z-index: 10;
             width: 90%;
             max-width: 1200px;
-            font-weight: 480;
         }
         
         .hero-title {
-            text-align:start;
-            font-size: 53px;
-            text-transform: uppercase;
-            line-height: 50px;
-            letter-spacing: -1.5px;
-            font-family: "Montserrat";
+            text-align: start;
+            font-weight: 480;
+            letter-spacing: -2,5px;
+
+            /* font e tamanho agora via Tailwind (font-horizon + text-5xl etc) */
         }
         
         .hero-subtitle {
@@ -169,6 +170,16 @@
             max-width: 800px;
             font-weight: 700;
             color: rgba(251, 146, 60)
+        }
+        #FF {
+            background-color: rgba(148, 142, 142, 0.123);
+            width: 40%;
+            margin-left: 30%;
+            border-radius: 5px;
+        }
+        #f {
+            width: 90%;
+            margin-left: 5%;
         }
         
         @media (max-width: 768px) {
@@ -206,6 +217,11 @@
                 text-align: center;
                 font-size: 28px;
             }
+            #FF {
+                width: 90%;
+                margin-left: 5%;
+                border-radius: 5px;
+            }
         }
        
     </style>
@@ -219,8 +235,8 @@
         
         <div class="hero-content">
             <div class="" style="width:  100%;">
-                <h1 class="hero-title text-white text-5xl md:text-6xl lg:text-7xl mb-4">
-                    <span  class="gradient-text">Sua Obra</span> <br/>começa com<br/> a <span>Máquina Certa!</span>
+                <h1 class="hero-title text-5xl md:text-6xl lg:text-7xl text-white mb-4 animate-fade-in ">
+                    <span class="gradient-text">SUA OBRA</span> <br/>COMEÇA COM<br/> A <span>MÁQUINA CERTA!</span>
                 </h1>
                 
                 <p class="hero-subtitle font-montserrat mb-8 animate-slide-up" style="animation-delay: 0.2s;">
@@ -240,7 +256,7 @@
     <div class="gradient-bg h-2 w-full"></div>
     
     <!-- Second Section -->
-    <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-10">
+    <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-0">
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-1/2 animate-slide-up">
@@ -288,7 +304,7 @@
     </section>
     
     <!-- Benefits Section -->
-    <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-10">
+    <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-0">
         <div class="max-w-7xl mx-auto">
             <h1 id="nossosB" class="text-4xl md:text-5xl lg:text-6xl font-horizon text-center mb-16 animate-fade-in">
                 Nossos <span class="gradient-text">benefícios</span>
@@ -358,7 +374,7 @@
     </section>
     
     <!-- About Section -->
-    <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-10">
+    <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-0">
         <div class="max-w-7xl mx-auto text-center animate-fade-in">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-horizon mb-8">
                 Focados em entregar mais que <span class="gradient-text">MÁQUINAS</span>
@@ -378,7 +394,7 @@
     </section>
     
     <!-- Machines Section -->
-    <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-10">
+    <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-0">
         <div class="max-w-7xl mx-auto">
             <h1 style="text-align: center;" id="nossosE" class="text-4xl md:text-5xl lg:text-6xl font-horizon mb-8">
                 Nossos <span class="gradient-text">equipamentos</span>
@@ -524,7 +540,7 @@
     </section>
     
     <!-- FAQ Section -->
-    <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-10">
+    <section class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-0">
         <div class="max-w-7xl mx-auto">
             <h1 style="text-align: center;" id="perguntasF" class="text-4xl md:text-5xl lg:text-6xl font-horizon mb-8">
                 Perguntas <span class="gradient-text">frequentes</span>
@@ -595,21 +611,22 @@
     </section>
     
     <!-- Contact Form -->
-    <section id="Formulario" class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-10">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16 animate-fade-in">
+    <section id="Formulario" class="py-20 px-4 md:px-8 lg:px-16 bg-black bg-opacity-0">
+        <div id="ContentForm" class="max-w-7xl mx-auto">
+            <div id="TTT" class="text-center mb-16 animate-fade-in">
                 <img src="assets/logoBig.webp" alt="Logo CH Terra" class="mx-auto w-48 mb-6">
                 <h1 class="text-3xl md:text-4xl lg:text-5xl font-horizon mb-4">
                 transformE seu projeto em realidade!
                 </h1>
-                <p style="font-size: 25px;" class="text-lg max-w-3xl mx-auto font-montserrat">
+                <p style="font-size: 19px;" class="text-lg max-w-3xl mx-auto font-montserrat">
                     Preencha o formulário e conte com equipamentos de alta performance, entrega rápida e suporte especializado para avançar com segurança e eficiência.
                 </p>
             </div>
             
-            <div class="max-w-2xl mx-auto bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 shadow-xl animate-slide-up">
+            <div id="FF">
                 <form id="f" class="space-y-6">
                     <div>
+                        <br/>
                         <label for="nome" class="block font-montserrat font-medium mb-2">Nome Completo *</label>
                         <input id="nome" type="text"
                                 class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-white placeholder-white placeholder-opacity-70">
@@ -636,7 +653,7 @@
                     <button type="button" onclick="Orcamento()"
                         class="w-full gradient-bg px-6 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 btn-hover">
                         ENVIAR SOLICITAÇÃO
-                    </button>
+                    </button><br/><br/>
                 </form>
             </div>
         </div>
@@ -700,9 +717,9 @@
             // Highlight active question
             document.querySelectorAll('.faq-item').forEach(item => {
                 if(item.id === id) {
-                    item.classList.toggle('bg-opacity-100');
+                    item.classList.toggle('bg-opacity-00');
                 } else {
-                    item.classList.remove('bg-opacity-100');
+                    item.classList.remove('bg-opacity-00');
                     item.querySelector('.resposta').classList.add('hidden');
                     item.querySelector('i').classList.remove('rotate-180');
                 }
